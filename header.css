@@ -111,3 +111,13 @@ h3 {
   text-align: left;
   font-size: 50px;
 }
+
+.sliding-box {
+width: 350px;
+height: 500px;
+border: 1px solid;
+display: block;
+float: left;
+margin-top: 10px;
+border-color: #411cc5a9;
+}
