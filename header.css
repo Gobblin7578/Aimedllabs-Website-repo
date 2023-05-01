@@ -1,14 +1,15 @@
 .nav-item {
   border: white; 
-  color: white; /* Add a text color */
-  padding: 14px 40px; /* Add some padding */
-  cursor: pointer; /* Add a pointer cursor on mouse-over */
-  border-radius: 2px;
+  color: white; 
+  padding: 14px 40px; 
+  cursor: pointer; 
+  border: 2px black;
   float: left;
+  list-style-type: none;
 }
 
-.nav-link:hover {
-  background-color: yellow; /* Yellow */
+.nav-item:hover {
+  background-color: yellow; 
   color: black;
 }
 
@@ -34,11 +35,11 @@
 
 .list-inline-item{
   border: white; 
-  padding: 14px 40px; /* Add some padding */
-  cursor: pointer; /* Add a pointer cursor on mouse-over */
+  padding: 14px 40px; 
+  cursor: pointer; 
   border-radius: 8px;
   float: right;
-  align: right;
+  list-style-type: none;
 }
 
 a {
@@ -55,9 +56,10 @@ a:hover {
   font-size: 16px;
   margin-top: -65px;
   margin-bottom: 5px;
-  margin-left: 155px;
-  margin-right: 5px;
-  width:950px;
+  margin-left: 395px;
+  margin-right: 0px;
+  width:890px;
+  list-style-type: none;
 }
 
 h2 {
@@ -76,18 +78,10 @@ picture {
 h1 {
   text-align: center;
   font-size: 25px;
+  margin-left: 105px;
+  margin-right: 65px;
 }
 
-.account-list {
-  border-radius: 8px;
-  padding: 12px 28px;
-  text-align: center;
-  font-size: 16px;
-  text-decoration: none;
-  background-color: #411cc5a9;
-  display: inline-block;
-  cursor: pointer;
-}
 
 .highlight {
   background-color: yellow;
@@ -112,12 +106,81 @@ h3 {
   font-size: 50px;
 }
 
-.sliding-box {
-width: 350px;
-height: 500px;
-border: 1px solid;
-display: block;
+.box-sliding {
+width: 550px;
+height: 680px;
+border: 3px solid #411cc5a9;
 float: left;
 margin-top: 10px;
-border-color: #411cc5a9;
+margin-left: 385px;
+margin-right: 65px;
+}
+
+.box-img {
+  margin-top: 25px;
+  margin-left: 20px;
+}
+
+h3 {
+  font-size: 40px;
+  color: #273437;
+  margin-left: 30px; 
+  }
+
+.box-text {
+  font-size: 18px;
+}
+
+.box-para {
+  font-size: 18px;
+  margin-left: 30px;
+}
+
+.account-list-list-inline {
+  border-radius: 10px;
+  background-color: #411cc5a9;
+  padding: -1px 3px;
+  vertical-align: middle;
+  font-size: 12px;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  color: #fff;
+  top: 0;
+  text-align: center;
+  list-style: none;
+}
+
+.slick-track {
+  color: #fff;
+  list-style-type: disc;
+  height: 35px;
+  width: 1287px;
+  font-size: 17px;
+  opacity: 1; 
+  background: black;
+}
+
+h4 {
+  margin-left: 85px;
+  font-size: 55px;
+  color: #273437;
+  font-family: poppins,sans-serif;
+  font-weight: 700;
+  letter-spacing: .5px;
+  line-height: 1.6;
+}
+
+.para-1 {
+  font-size: 23px;
+  margin-left: 85px;
+  margin-right: 35px;
+}
+
+.nav-tabs {
+  border: unset;
+}
+
+.navbar-list {
+  font-size: 19px;
 }
