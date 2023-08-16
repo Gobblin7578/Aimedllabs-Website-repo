@@ -5,207 +5,391 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Aimed Labs</title>
+  <meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1">
+  <link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css>
+  <link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css>
+  <link rel=stylesheet href=https://aimedlabs.com/%20themify/themify.css>
   <link href="/home/gobblin/Documents/Bootstrap/Website/Aimedlabs-Website-repo/header.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="/home/gobblin/Documents/Bootstrap/Website/Aimedlabs-Website-repo/slick.css"/>
+  <script src="/home/gobblin/Documents/Bootstrap/Website/Aimedlabs-Website-repo/slick.js"></script>
+  <script src="/home/gobblin/Documents/Bootstrap/Website/Aimedlabs-Website-repo/script.js"></script>
+  <link rel="shortcut icon" href=https://aimedlabs.com/images/logo.ico type=image/x-icon>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-GC8WVH3QHD"></script>
+  <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+          dataLayer.push(arguments)
+      }
+      gtag("js", new Date),
+      gtag("config", "G-GC8WVH3QHD")
+  </script>
 </head>
 <body>
-  <nav class="main-nav navbar navbar-expand-lg headroom nav-bg headroom--not-top headroom--pinned">
-    <div class="container-fluid">
-      <a class="navbar-brand" >
-        <img 
-        class="logo-main" src="/home/gobblin/Documents/Bootstrap/Website/Aimedlabs-Website-repo/images/Logo.png" 
-        alt="" 
-        width="200" 
-        height="45">
-      </a>
-      <button 
-        class="navbar-toggler" 
-        type="button" 
-        data-toggle="collapse" 
-        data-target="#navbarSupportedContent" 
-        aria-controls="navbarSupportedContent" 
-        aria-expanded="false" 
-        aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="navbar-collapse nav-list collapse show" id="mainNav">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a href="#home" class="nav-link scroll">HOME</a>
-          </li>
-          <li class="nav-item">
-            <a href="" class="nav-link scroll">SERVICES</a>
-          </li>
-          <li class="nav-item">
-            <a href="" class="nav-link scroll">CLIENTS</a>
-          </li>
-          <li class="nav-item">
-            <a href="" class="nav-link scroll">TECHSTACK</a>
-          </li>
-        </ul>
-        <button>
-          <div class="account-list-list-inline">
-            <ul>
-              <li class="list-inline-item">
-                <a href="" class="btn btn-sm btn-violate">GET IN TOUCH</a>
-              </li>
-            </ul>
-          </div>
-        </button>
-      </div>
+  <div class=shape-hero>
+      <div class=circle-1></div>
+      <div class=circle-2></div>
+      <div class=circle-3></div>
+      <div class=circle-4></div>
+      <script>
+          let circleList = []
+            , animationProgress = 1
+            , circleProgress = 0
+            , animationDirection = -1
+            , maxOpacity = circleList[0].style.opacity;
+          setInterval(function() {
+              animationProgress += .05 * animationDirection,
+              animationProgress < 0 && (animationDirection = 1),
+              animationProgress > maxOpacity && (animationDirection = -1,
+              circleProgress = (circleProgress + 1) % circleList.length);
+              let e = circleList[circleProgress];
+              e.style.opacity = animationProgress
+          }, 100)
+      </script>
     </div>
-  </nav>
-  <br>
-  <div id="container" class="page">
-    <section class="hero" id="home">
-    <div class="container">
-      <div class="row align-items-center text-center">
-        <div class="col-lg-12 mx-auto">
-          <div class="hero-content">
-            <h2>Well
-              <picture>
-                <img src="/home/gobblin/Documents/Bootstrap/Website/Aimedlabs-Website-repo/images/512.webp" 
-                alt=""
-                width="185"
-                height="185">
-              </picture>
-              Crafted
-              <br>
-              Website
-              <br>
-              can move the
-              <picture>
-                <img src="/home/gobblin/Documents/Bootstrap/Website/Aimedlabs-Website-repo/images/8213-kurzgesagt.gif" 
-                alt=""
-                width="195"
-                height="195">
-              </picture>
-            </h2>
-            <h1>
-              <span class="mobile-invisible">
+    <nav class="main-nav navbar navbar-expand-lg">
+      <div class="container-fluid">
+          <a class="navbar-brand" href="">
+              <img class="logo-main" src=/home/gobblin/Documents/Bootstrap/Website/Aimedlabs-Website-repo/images/Logo.png alt=logo-white>
+          </a>
+          <button class="navbar-toggler collapsed" type=button data-toggle=collapse data-target=#mainNav>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+          </button>
+          <div class="collapse navbar-collapse nav-list" id=mainNav>
+              <ul class="navbar-nav ml-auto">
+                  <li class="nav-item">
+                      <a href="" class="nav-link scroll">Home</a>
+                  </li>
+                  <li class="nav-item">
+                      <a href="" class="nav-link scroll">Services</a>
+                  </li>
+                  <li class="nav-item">
+                      <a href="" class="nav-link scroll">Clients</a>
+                  </li>
+                  <li class="nav-item">
+                      <a href="" class="nav-link scroll">Techstack</a>
+                  </li>
+              </ul>
+              <div class="account-list list-inline">
+                <ul>
+                  <li class="list-inline-item">
+                      <a href="" class="btn btn-sm btn-violate">Get in touch</a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+      </div>
+    </nav>
+    <div id="container" class="page">
+      <section class="hero" id="home">
+        <div class="container">
+          <div class="row align-items-center text-center">
+            <div class="col-lg-12 mx-auto">
+              <div class="hero-content">
+                <h2>
+                  Well
+                 <picture>
+                    <source srcset="" type="image/webp">
+                    <img src="/home/gobblin/Documents/Bootstrap/Website/Aimedlabs-Website-repo/images/512.webp" alt="🚀">
+                  </picture>
+                    <br class="mobile-visible">Crafted
+               </h2>
+                <h1 class="hero-punch hero-punch-slider">
+                  <span class="hero-punch-slider-item animate-2">
+                    <div class="hero-punch-slider-item-text">SOFTWARE</div>
+                  </span>
+                  <span class="hero-punch-slider-item animate-2">
+                    <div class="hero-punch-slider-item-text">APPS</div>
+                  </span>
+                  <span class="hero-punch-slider-item animate-2">
+                    <div class="hero-punch-slider-item-text">WEBSITES</div>
+                  </span>
+                  <span class="hero-punch-slider-item animate-2">
+                    <div class="hero-punch-slider-item-text">AI / ML</div>
+                  </span>
+                  <span class="hero-punch-slider-item animate-2">
+                    <div class="hero-punch-slider-item-text">DESIGNS</div>
+                  </span>
+                  <span class="hero-punch-slider-item animate-2">
+                    <div class="hero-punch-slider-item-text">PLATFORMS</div>
+                  </span>
+                </h1>
+                <h2>
+                 <span class="mobile-visible">
+                    can move<br>
+                    the 
+                    <a href="">
+                      <img src="/home/gobblin/Documents/Bootstrap/Website/Aimedlabs-Website-repo/images/8213-kurzgesagt.gif" alt="🌎">
+                    </a>
+                  </span>
+                  <span class="mobile-invisible">
+                    can move the 
+                    <a href="">
+                      <img src="/home/gobblin/Documents/Bootstrap/Website/Aimedlabs-Website-repo/images/8213-kurzgesagt.gif" alt="🌎">
+                    </a>
+                  </span>
+                </h2>
+                <span class="mobile-invisible">
+                  <p>
+                    Aimed Labs helps organizations accelerate towards their goals &mission by <span class="highlight">Automating their Business Process/Operations</span>
+                    , <span class="highlight">Designing/Developing their Digital Products</span>
+                    , <span class="highlight">Managing their Cloud/DevOps infrastructure</span>
+                    &<span class="highlight">Developing Custom Software Tools</span>
+                    for them.
+                  </p>
+                </span>
+                <span class="mobile-visible">
+                  <p>
+                    <p>
+                      Aimed Labs helps organizations <strong>accelerate towards their goals &mission by</strong>
+                    </p>
+                    <ul>
+                      <li>
+                        Automating their <strong>Business Process/Operations</strong>
+                      </li>            
+                      <li>                                      
+                        Designing/Developing their <strong>Digital Products</strong>                                  
+                      </li>
+                      <li>
+                        Managing their <strong>Cloud/DevOps infrastructure</strong>
+                      </li>
+                      <li>
+                        Developing 
+                        <strong>Custom Software</strong>                                      
+                        Tools for them                        
+                      </li>                      
+                    </ul>                    
+                  </p>                  
+                </span>                
+              </div>              
+            </div>            
+          </div>          
+        </div>        
+        <section class="marquee banner" id="banner">        
+          <ul class="banner-content">        
+            <li>Robust Code. Awesome Designs. Superior Performance. Guaranteed.</li>        
+          </ul>        
+          <ul class="banner-content">        
+            <li>Robust Code. Awesome Designs. Superior Performance. Guaranteed.</li>        
+          </ul>        
+        </section>
+      </section>
+      <section class="boxy-sliding background fade-in-on-scroll" id="problems">
+        <script src=""></script>
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-lg-12">
+              <div class="section-title">              
+               <h2>
+                  Here &rsquo;s what <span class="highlight">You Need</span>
+                </h2>
+                <p></p>
+              </div>
+            </div>
+            <div title="Click to select" class="boxy-sliding-slider">
+              <div class="boxy-sliding-item">
+                <lottie-player class="col-6" loop mode="normal" src=""></lottie-player>
+                <h2>
+                  As A <span class="highlight">Traditional Business</span>
+                </h2>
+                <ul>
+                  <li>
+                    You can see the business getting decrease due to <strong>tech-enabled competitors</strong>
+                    .
+                  </li>
+                  <li>
+                    <strong>You want to expand to ever more customer base</strong>
+                    by moving to <strong>digital platforms and channels</strong>
+                    .
+                  </li>
+                  <li>
+                    You have <strong>inefficient and outdated processes</strong>
+                    that could be streamlined with <strong>custom software solutions</strong>
+                   .
+                  </li>
+                  <li>
+                    You desire a partner who can provide <strong>ongoing support and maintenance</strong>
+                    for your software solutions.
+                  </li>
+                </ul>
                 <p>
-                  Aimed Labs helps organizations accelerate towards their goals &amp; mission by 
-                  <span class="highlight">Automating their Business Process/Operations</span>
-                  , 
-                  <span class="highlight">Designing/Developing their Digital Products</span>
-                  , 
-                  <span class="highlight">Managing their Cloud/DevOps infrastructure</span>
-                  & 
-                  <span class="highlight">Developing Custom Software Tools</span>
-                  for them.
+                  At Aimed Labs, we understand that this <strong>digital-age</strong>
+                  is an altogether <strong>different ball-game</strong>
+                  for traditional business. And that they need a <strong>trusted partner</strong>
+                  to help <strong>transform digitally</strong>
+                  .
                 </p>
-              </span>
-            </h1>
+              </div>
+                <div class="boxy-sliding-item">
+                  <lottie-player class="col-6" loop mode="normal" src=""></lottie-player>
+                  <h2>
+                    As A<span class="highlight">Founder</span>
+                  </h2>
+                  <ul>
+                    <li>
+                      You have <strong>identified the gap in the market</strong>
+                      , have the <strong>domain expertise</strong>
+                      &<strong>have a great idea</strong>
+                      to fix the gap.
+                    </li>
+                    <li>
+                      Your time is precious &<strong>you need to focus</strong>
+                      on building your <strong>brand, relationship and driving revenue/capital</strong>
+                      .
+                    </li>
+                    <li>
+                      You need a <strong>reliable partner to quickly develop a prototype</strong>
+                      to pitch to **investors &customers.
+                    </li>
+                    <li>
+                      You need a team that can take <strong>ownership of the development process</strong>
+                      &work with you through every step of the way, from <strong>ideation to launch</strong>
+                      .
+                    </li>
+                  </ul>
+                  <p>At Aimed Labs, having closely worked with Founders, we understand the challenges that Founders face when it comes to software development.</p>
+                </div>
+                <div class="boxy-sliding-item">
+                  <lottie-player class="col-6" loop mode="normal" src=""></lottie-player>
+                  <h2>
+                    As An <span class="highlight">NGO</span>
+                  </h2>
+                  <ul>
+                    <li>
+                      You want to <strong>leverage technology to super-charge your efforts</strong>
+                      and bring positive changes at the <strong>wider &deeper levels</strong>
+                      .
+                    </li>
+                    <li>
+                      You understand that the <strong>right partner</strong>
+                      will help you <strong>find the most optimal solution</strong>
+                      aligned to <strong>your mission</strong>
+                      .
+                    </li>
+                    <li>
+                      You want to <strong>build a platform to engage with donors, volunteers and/or the beneficiaries</strong>
+                      &<strong>improve operations.</strong>
+                    </li>
+                    <li>
+                      You want a partner who understands the unique challenges faced by NGOs and can work within your <strong>budget constraints</strong>
+                      .
+                    </li>
+                  </ul>
+                  <p>
+                    At Aimed Labs, we understand that you need a partner who is aligned with your <strong>mission values</strong>
+                    &can help <strong>streamline operations</strong>
+                    &deliver a <strong>compelling user experience.</strong>
+                  </p>
+                </div>
+                <div class="boxy-sliding-item">
+                  <lottie-player class="col-6" loop mode="normal" src=""></lottie-player>
+                  <h2>
+                    As An <span class="highlight">Enterprise</span>
+                  </h2>
+                  <ul>
+                    <li>
+                      You need a partner who can <strong>deliver high-quality work that meets your strict security and compliance requirements</strong>
+                      .
+                    </li>
+                    <li>
+                      You need to balance the needs of <strong>multiple departments</strong>
+                      &may also need to integrate existing or <strong>legacy systems &data sources</strong>
+                      .
+                    </li>
+                    <li>
+                      You want a partner who can <strong>work closely with your IT team.</strong>
+                    </li>
+                    <li>
+                      You want a partner that can implement <strong>innovate technologies</strong>
+                      &help achieve <strong>supply-chain/operational efficiencies</strong>
+                      .
+                    </li>
+                  </ul>
+                  <p>
+                    At Aimed Labs, we understand that the enterprise needs to <strong>focus on their core processes &deliverables</strong>
+                    . We also understand that your software requirements may include <strong>integrating different software systems</strong>
+                    and <strong>implementing emerging technologies</strong>
+                    to help you optimize even further.
+                  </p>
+                </div>
+                <div class="boxy-sliding-item">
+                  <lottie-player class="col-6" loop mode="normal" src=""></lottie-player>
+                  <h2>
+                    As A <span class="highlight">Startup</span>
+                  </h2>
+                  <ul>
+                    <li>
+                      You need a partner who can help you <strong>move fast, iterate quickly, and get your product fast.</strong>
+                    </li>
+                    <li>
+                      You need the <strong>minimum viable product (MVP)</strong>
+                      to be quick &able to handle <strong>growth and user demand</strong>
+                      .
+                    </li>
+                    <li>
+                      You want a partner who can work with you to <strong>refine your product idea</strong>
+                      and <strong>help you prioritize features</strong>
+                      .
+                    </li>
+                    <li>
+                      You need the <strong>code to be robust, extensible, testable &highly-readable</strong>
+                      to allow you to built an in-house tech-team.
+                    </li>
+                  </ul>
+                  <p>
+                    At Aimed Labs, we understand that you need a partner who can help you move <strong>fast and stay lean</strong>
+                    with varied expertise, from <strong>product-design, agile-development</strong>
+                    to <strong>developing launch &update strategies</strong>
+                    .
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div>
-    <section class="slick-slider" id="banner">
-      <div class="slick-track" >
-          <ul class="banner-content slick-slide slick-cloned" data-slick-index="-2" aria-hidden="true" tabindex="-1">
-            <li>Robust Code. Awesome Designs. Superior Performance. Guaranteed.</li>
-          </ul>
-      </div>
-    </section>
-    <br>
-    <br>
-    <div class="head">
-      <h4>
-        ___
-        <br>
-        Here's what 
-        <span class="highlight" font-color="rgb(52, 56, 61)">You Need</span>  
-      </h4>
-    </div>
-    <div class="box-sliding" width="400" height="180">
-      <a class="box-img">
-        <img 
-        class="image-1" src="/home/gobblin/Documents/Bootstrap/Website/Aimedlabs-Website-repo/images/image1.png" 
-        width="250" 
-        height="175">
-      </a>
-      <h3>As a
-        <span class="highlight">Founder</span>
-      </h3>
-      <ul class="box-text">
-        <li>
-          "You have "
-          <strong>identified the gap in the market</strong>
-          ", have the "
-          <strong>domain expertise</strong>
-          "& "
-          <strong>have a great idea</strong>
-          "to fix the gap."
-        </li>
-        <br>
-        <li>
-          "Your time is precious & "
-          <strong>you need to focus</strong>
-          "on building your "
-          <strong>brand, relationship and driving revenue/capital</strong>
-          "." 
-        </li>
-        <br>
-        <li>
-          "You need a "
-          <strong>reliable partner to quickly develop a prototype</strong>
-          "to pitch to **investors &amp; customers."
-        </li>
-        <br>
-        <li>
-          "You need a team that can take "
-          <strong>ownership of the development process</strong>
-          " & work with you through every step of the way, from " 
-          <strong>ideation to launch</strong>
-          "."
-        </li>
-      </ul>
-      <p class="box-para">
-        At Aimed Labs, having closely worked with Founders, we understand the challenges 
-        that Founders face when it comes to software development.
-      </p>
-    </div>
-  </div>
-  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-  <div class="head-2" id="services">
-    <h4>
-      ___
-      <br>
-      So
-      <span class="highlight" >What do we do?</span>  
-    </h4>
-    <p class="para-1">
-      We are a full-stack, end-to-end software development & design company. 
-      Our end-to-end services include Ideation, Design, Development, Hosting & System-Maintenance over long periods of time.
-    </p>
-  </div>
-  <br>
-  <br>
-  <nav class="nav-bg">
-    <div class="navbar-list collapse show" id="mainNav">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
-          <a href="" class="nav-link scroll" id="consultancy-tab">Consultancy</a>
-        </li>
-        <li class="nav-item">
-          <a href="" class="nav-link scroll" id="product-development-tab">Product Development</a>
-        </li>
-        <li class="nav-item">
-          <a href="" class="nav-link scroll" id="process-automation-tab">Process Automation</a>
-        </li>
-        <li class="nav-item">
-          <a href="" class="nav-link scroll" id="ui-ux-tab">UI/UX</a>
-        </li>
-        <li class="nav-item">
-          <a href="" class="nav-link scrool" id="ai-ml-tab">AI/ML Models</a>
-        </li>
-        <li class="nav-item">
-          <a href="" class="nav-link scrool" id="hosting-tab">Cloud Hosting</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
-</body>
+          <script>
+            $(".boxy-sliding-slider").slick({
+                autoplay: !0,
+                infinite: !0,
+                pauseOnHover: !0,
+                speed: .7 * 1e3,
+                variableWidth: !0,
+                centerMode: !0,
+                autoplaySpeed: 2.5 * 1e3,
+                arrow: !0,
+                prevArrow: '<div class="boxy-sliding-arrow-left fa fa-solid fa-circle-arrow-left"></div>',
+                nextArrow: '<div class="boxy-sliding-arrow-right fa fa-solid fa-circle-arrow-right"></div>',
+                dots: !1,
+                centerPadding: "10px",
+                focusOnSelect: !0,
+                swipeToSlide: !0,
+                mobileFirst: !0,
+                adaptiveHeight: !1
+            })
+          </script>
+        </section>
+        <section class="tabs background fade-in-on-scroll" id=services>
+          <div class="container">
+            <div class="col px-0 justify-content-center">
+              <div class="section-title">
+                <h2>
+                  So <span class="highlight">What do we do ?</span>
+                </h2>
+                <p>We are a full-stack, end-to-end software development &design company. Our end-to-end services include Ideation, Design, Development, Hosting &System-Maintenance over long periods of time.</p>
+              </div>
+              <nav>
+                <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
+                  <a class="nav-item nav-link active" id="nav-consultancy-tab" data-toggle="tab" href="" role="tab" aria-controls="nav-consultancy" aria-selected="false">Consultancy</a>
+                  <a class="nav-item nav-link" id="nav-apps-tab" data-toggle="tab" href="" role="tab" aria-controls="nav-apps" aria-selected="false">Product Development</a>
+                  <a class="nav-item nav-link" id="nav-process-automation-tab" data-toggle="tab" href="" role="tab" aria-controls="nav-process-automation" aria-selected="false">Process Automation</a>
+                  <a class="nav-item nav-link" id="nav-ui-ux-tab" data-toggle="tab" href="" role="tab" aria-controls="nav-ui-ux" aria-selected="false">UI / UX</a>
+                  <a class="nav-item nav-link" id="nav-al-ml-tab" data-toggle="tab" href="" role="tab" aria-controls="nav-al-ml" aria-selected="false">AI / ML Models</a>
+                  <a class="nav-item nav-link" id="nav-hosting-tab" data-toggle="tab" href="" role="tab" aria-controls="nav-hosting" aria-selected="false">Cloud Hosting</a>
+                </div>
+              </nav>
+            </div> 
+          </div> 
+        </section>
+    </div>        
+  </body>
 </html>
